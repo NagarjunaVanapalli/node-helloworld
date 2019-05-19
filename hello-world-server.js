@@ -3,9 +3,12 @@
 
 var http = require('http');
 
+var port = 4827;
+var host = "localhost";
+
 http.createServer(function sample(req, res) {
 	res.writeHead(200, {'Content-Type': 'text/plain'});
 	res.end('Node JS, Hello World ');
-}).listen(4826,'localhost')
+}).listen(port,host)
 
-console.log('Server is running at http://localhost:4826/');  
+console.log('Server is running at http://%s:%s/', host, port);  
